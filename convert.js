@@ -22,7 +22,7 @@ function processExport() {
 
 	        var posts = result.rss.channel[0].item;
 
-			
+
 			fs.mkdir('out', function() {
 		        for(var i = 0; i < posts.length; i++) {
 	        		processPost(posts[i]);
@@ -63,7 +63,7 @@ function processPost(post) {
 			fs.mkdir(fullPath, function() {
 				//Find all images
 				var patt = new RegExp("(?:src=\"(.*?)\")", "gi");
-				
+
 				var m;
 				var matches = [];
 				while((m = patt.exec(postData)) !== null) {
@@ -129,7 +129,7 @@ function processPost(post) {
 
 				});
 			});
-		});		
+		});
 	});
 }
 
@@ -150,11 +150,11 @@ function downloadFile(url, path) {
 		});
 	}
 	else {
-	  console.log ('passing on: ' + url + ' ' + url.indexOf('https:')); 
+	  console.log ('passing on: ' + url + ' ' + url.indexOf('https:'));
 	}
 	}
 	else {
-	  console.log ('passing on: ' + url + ' ' + url.indexOf('https:')); 
+	  console.log ('passing on: ' + url + ' ' + url.indexOf('https:'));
 	}
 }
 function getPaddedMonthNumber(month) {
