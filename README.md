@@ -1,4 +1,22 @@
+
+
 # wordpress-to-markdown
+
+Fork of https://github.com/ytechie/wordpress-to-markdown
+
+Default use to convert a file called export.xml to docpad useable Markdown
+`node convert.js`
+
+
+Options:
+```
+-t [Type] "docpad" or "vuepress" - Changes output .md file: index.html.md for docpad, README.md for vuepress
+-p [Permalink] "date" or "flat" - /yyyy/mm/dd/a-post/ structure if date, /a-post/ if flat
+-f [File] - the WordPress export XML file to convert
+```
+
+
+## Original README.md
 
 This script uses the standard exported XML file from WordPress, and creates a folder/file structure that contains all of the blog posts, converted to markdown format. It will also download all of the images.
 
